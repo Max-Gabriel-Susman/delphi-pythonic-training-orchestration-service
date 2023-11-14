@@ -1,3 +1,8 @@
+import torch
+import torch.nn as nn
+import torch.distributed as dist
+
+
 def checkpoint(model: nn.Module, gpu: int, epoch: int):
     """Saves the model in master process and loads it everywhere else.
     

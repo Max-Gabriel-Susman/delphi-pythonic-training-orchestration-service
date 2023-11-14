@@ -1,4 +1,8 @@
-.def setup(rank: int, args: Namespace):
+from argparse import Namespace
+import os 
+import torch.distributed as dist 
+
+def setup(rank: int, args: Namespace):
     """Initializes a distributed training process group.
     
     Args:

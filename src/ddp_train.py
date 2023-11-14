@@ -1,3 +1,8 @@
+import argparse
+from argparse import Namespace
+import ddp_setup
+
+
 def train(gpu: int, args: Namespace):
     """Implements the training loop for PyTorch a model.
 
